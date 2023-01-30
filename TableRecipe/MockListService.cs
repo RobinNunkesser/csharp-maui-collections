@@ -30,7 +30,7 @@ namespace TableRecipe
 
         public List<ItemViewModel> Execute() => Items;
 
-        public async Task<List<ItemViewModel>> Execute(string filter)
+        public async Task<List<ItemViewModel>> ExecuteAsync()
         {
             await Task.Delay(1000);
             return Items;

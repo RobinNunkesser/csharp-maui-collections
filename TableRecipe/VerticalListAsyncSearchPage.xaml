@@ -10,7 +10,8 @@
             <SearchBar
                 x:Name="MainSearchBar"
                 Placeholder="Search term"
-                Text="{Binding SearchTerm}"/>
+                Text="{Binding SearchTerm}"
+                TextChanged="MainSearchBar_TextChanged"/>
         </CollectionView.Header>
         <CollectionView.EmptyView>
                     <ActivityIndicator IsRunning="True"/>

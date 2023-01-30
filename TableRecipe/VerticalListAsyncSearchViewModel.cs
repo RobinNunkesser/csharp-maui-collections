@@ -44,7 +44,7 @@ namespace TableRecipe
 
         async internal Task Initialize()
         {
-            items = await service.Execute("");
+            items = await service.ExecuteAsync();
             OnPropertyChanged("FilteredItems");
         }
 
