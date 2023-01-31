@@ -2,8 +2,8 @@
 
 public partial class VerticalListAsyncSearchPage : ContentPage
 {
-    private readonly VerticalListAsyncSearchViewModel _viewModel
-        = new();
+    private readonly VerticalListAsyncSearchViewModel _viewModel =
+        new();
 
     public VerticalListAsyncSearchPage()
     {
@@ -17,8 +17,10 @@ public partial class VerticalListAsyncSearchPage : ContentPage
         await _viewModel.Initialize();
     }
 
-    void MainSearchBar_TextChanged(System.Object sender,
-        Microsoft.Maui.Controls.TextChangedEventArgs e)
+    void MainSearchBar_TextChanged(
+        System.Object sender,
+        Microsoft.Maui.Controls.TextChangedEventArgs e
+    )
     {
         MainSearchBar.Focus();
     }

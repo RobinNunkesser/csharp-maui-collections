@@ -45,7 +45,6 @@ namespace TableRecipe
 
         public ObservableCollection<
             SectionViewModel<ItemViewModel>
-        > Groups
-        { get; set; }
+        > Groups { get; set; }
     }
 }

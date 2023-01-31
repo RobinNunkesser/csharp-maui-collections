@@ -2,8 +2,8 @@
 {
     public partial class VerticalListSearchHeaderPage : ContentPage
     {
-        private readonly VerticalListSearchHeaderViewModel _viewModel
-            = new();
+        private readonly VerticalListSearchHeaderViewModel _viewModel =
+            new();
 
         public VerticalListSearchHeaderPage()
         {
@@ -11,8 +11,10 @@
             BindingContext = _viewModel;
         }
 
-        void MainSearchBar_TextChanged(System.Object sender,
-            Microsoft.Maui.Controls.TextChangedEventArgs e)
+        void MainSearchBar_TextChanged(
+            System.Object sender,
+            Microsoft.Maui.Controls.TextChangedEventArgs e
+        )
         {
             MainSearchBar.Focus();
         }

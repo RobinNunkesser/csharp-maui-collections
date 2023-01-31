@@ -4,7 +4,8 @@ using System.Runtime.CompilerServices;
 
 namespace TableRecipe
 {
-    public class VerticalListAsyncSearchViewModel : INotifyPropertyChanged
+    public class VerticalListAsyncSearchViewModel
+        : INotifyPropertyChanged
     {
         private MockListService service = new();
         private List<ItemViewModel>? items;
@@ -14,8 +15,8 @@ namespace TableRecipe
             {
                 if (string.IsNullOrEmpty(searchTerm))
                     return items;
-                return items?
-                    .Where(
+                return items
+                    ?.Where(
                         item =>
                             item.Text
                                 .ToLower()

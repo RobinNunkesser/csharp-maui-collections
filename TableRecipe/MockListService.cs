@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace TableRecipe
 {
     public class MockListService
@@ -35,7 +36,5 @@ namespace TableRecipe
             await Task.Delay(1000);
             return Items;
         }
-
     }
 }
-
