@@ -27,6 +27,9 @@
                 <TextCell Text="Grouped Vertical Collection"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type tablerecipe:VerticalListGroupingPage}" />
+                <TextCell Text="Grouped Vertical Collection With Async Update"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type tablerecipe:VerticalListGroupingAsyncUpdatePage}" />
             </TableSection>
         </TableRoot>
     </TableView>

@@ -11,7 +11,7 @@ public partial class VerticalListAsyncSearchPage : ContentPage
         BindingContext = _viewModel;
     }
 
-    protected async override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
         await _viewModel.Initialize();

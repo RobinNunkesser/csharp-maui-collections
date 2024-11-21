@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TableRecipe.VerticalListGroupingAsyncUpdatePage"
+             Title="Grouping with async update">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Update" Command="{Binding Update}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <CollectionView
+            ItemsSource="{Binding Groups}"
+            IsGrouped="true">
+            <CollectionView.EmptyView>
+                <ActivityIndicator IsRunning="True"/>
+            </CollectionView.EmptyView>
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        Text="{Binding Header}"
+                        BackgroundColor="LightGray"
+                        FontSize="Large"
+                        FontAttributes="Bold"/>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label
+                            Text="{Binding Text}"
+                            FontAttributes="Bold" />
+                        <Label
+                            Text="{Binding Detail}"
+                            FontAttributes="Italic"
+                            VerticalOptions="End" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
